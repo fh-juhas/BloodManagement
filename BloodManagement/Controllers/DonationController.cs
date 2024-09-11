@@ -154,7 +154,7 @@ namespace BloodManagement.Controllers
 
         [HttpPut("UpdateDonation/{id}")]
 
-        public async Task<ActionResult<Donor>> UpdateDonation(string id,Donation updateddonation)
+        public async Task<ActionResult<Donor>> UpdateDonation(string id,UpdateDonationDto updateddonation)
         {
             if (id!= updateddonation.DonationId)
             {
@@ -168,6 +168,7 @@ namespace BloodManagement.Controllers
                 {
                     return NotFound($"employee with {id} not found");
                 }
+                donor.DonationId = updateddonation.DonationId;
                 donor.DonorId = updateddonation.DonorId;
                 donor.ReceiverName = updateddonation.ReceiverName;
                 donor.ReceiverPhone = updateddonation.ReceiverPhone;
@@ -176,8 +177,8 @@ namespace BloodManagement.Controllers
                 donor.BloodGroupId = updateddonation.BloodGroupId;
                 donor.DonationTime = updateddonation.DonationTime;
 
-                _unitOfWork.Donations.UpdateAsync(donor);
-                _unitOfWork.SaveAsync();
+                await _unitOfWork.Donations.UpdateAsync(donor);
+                await _unitOfWork.SaveAsync();
 
                 return Ok($"Donor with ID {id} updated successfully.");
             }
