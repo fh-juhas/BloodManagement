@@ -26,7 +26,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/BloodManagement.git
+   git clone [https://github.com/fh-juhas/BloodManagement.git]
    ```
 2. Navigate to the project directory:
    ```bash
