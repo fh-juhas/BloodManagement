@@ -16,45 +16,15 @@
 - **Database**: MSSQL
 - **Tools**: Visual Studio, SQL Server Management Studio
 
-## Installation
+### District Endpoints
+| Method | Endpoint                                    | Description                                 |
+|--------|---------------------------------------------|---------------------------------------------|
+| GET    | /api/District/GetAllDistricts                | Retrieve all Bloodgroups                   |
 
-### Prerequisites
-- [.NET Core SDK](https://dotnet.microsoft.com/download)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-
-### Setup Instructions
-
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/fh-juhas/BloodManagement.git]
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd BloodManagement
-   ```
-
-3. Set up the database:
-   - Create a new database in MSSQL Server.
-   - Update the connection string in `appsettings.json` to point to your local MSSQL database:
-     ```json
-     "ConnectionStrings": {
-         "DefaultConnection": "Server=your_server_name;Database=BloodManagementDB;User Id=your_user_id;Password=your_password;"
-     }
-     ```
-
-4. Apply database migrations:
-   ```bash
-   dotnet ef database update
-   ```
-
-5. Run the application:
-   ```bash
-   dotnet run
-   ```
-
-6. The application will be available at `https://localhost:5001`.
-
-## API Endpoints
+## Blood Group Endpoints
+| Method | Endpoint                                    | Description                                 |
+|--------|---------------------------------------------|---------------------------------------------|
+| GET    | /api/Blood/GetAllBloodgroups                | Retrieve all Districts                      |
 
 ### Donation Endpoints
 | Method | Endpoint                                    | Description                                 |
