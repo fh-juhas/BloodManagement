@@ -19,12 +19,12 @@
 ### District Endpoints
 | Method | Endpoint                                    | Description                                 |
 |--------|---------------------------------------------|---------------------------------------------|
-| GET    | /api/District/GetAllDistricts                | Retrieve all Bloodgroups                   |
+| GET    | /api/District/GetAllDistricts                | Retrieve all Districts                   |
 
 ## Blood Group Endpoints
 | Method | Endpoint                                    | Description                                 |
 |--------|---------------------------------------------|---------------------------------------------|
-| GET    | /api/Blood/GetAllBloodgroups                | Retrieve all Districts                      |
+| GET    | /api/Blood/GetAllBloodgroups                | Retrieve all Bloodgroups                      |
 
 ### Donation Endpoints
 | Method | Endpoint                                    | Description                                 |
